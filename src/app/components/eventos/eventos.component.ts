@@ -9,6 +9,6 @@ export class EventosComponent {
   show: boolean = true
 
   showMessage(): void {
-    this.show = !this.show;
+    this.show = !this.show; // toggle
   }
 }
