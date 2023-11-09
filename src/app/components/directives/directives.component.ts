@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-
+  size = 40
+  font = 'Arial'
+  color = "blue"
+  classes = ["green-title", "small-title"];
+  underline = 'underline-title'
 }
