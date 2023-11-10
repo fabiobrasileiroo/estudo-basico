@@ -33,6 +33,7 @@ export class ListRenderComponent {
 
   removeAnimal(animal: Animal) {
     console.log("Removendo animal..")
+    this.animals = this.listService.remove(this.animals, animal)
   }
 
 };
