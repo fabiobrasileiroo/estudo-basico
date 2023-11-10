@@ -1,19 +1,28 @@
 import { Component } from '@angular/core';
-
+import { Animal } from 'src/app/Animal'
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent {
-  animals = [
-    {name: "Turca", type: "Dog"},
-    {name: "Tom", type: "Cat"},
-    {name: "Frida", type: "Dog"},
-    { name: "Bob", type: "horse"}
+  animals: Animal[ ] = [
+    {name: "Turca", type: "Dog", age: 4},
+    {name: "Tom", type: "Cat", age: 10},
+    {name: "Frida", type: "Dog", age: 5},
+    { name: "Bob", type: "horse", age: 1}
   ];
-  anima = [
-    { name: 'Teste', type: "sla" },
-    { name: 'Alguma coisa', type: "foi" }
+  /*
+  anima: Animal[] = [
+    { name: 'Teste', type: "sla", age: 10 },
+    { name: 'Alguma coisa', type: "foi", age: 4 }
+
   ];
+  */
+
+  animalDetails = ''
+
+  showAge(animal: Animal): void {
+    this.animalDetails = `O pet ${animal.name} tem ${animal.age} ano`
+  }
 };
