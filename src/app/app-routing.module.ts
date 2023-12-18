@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 //import { ListService } from './services/list.service';
 import { Directive } from '@angular/core';
 import { ListRenderComponent } from './components/list-render/list-render.component';
+
 const routes: Routes = [
   {path: '', component: Directive},
   {path: 'list', component:ListRenderComponent}
