@@ -8,14 +8,15 @@ import { ListService } from 'src/app/services/list.service';
   templateUrl: './item-detail.component.html',
   styleUrls: ['./item-detail.component.css']
 })
-export class ItemDetailComponent {
+export class ItemDetailComponent{
   animal?: Animal; 
 
   constructor(private listService: ListService,private route: ActivatedRoute) {
-    this.getAnimal()
+    this.getAnimal();
   }
 
   getAnimal() {
-    const id = this.route.snapshot.paramMap.get("id")
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.listService.getItem(id).subscribe((animal) => (this.animal = animal))
   }
 }
